@@ -12,9 +12,11 @@ import Footer from "./reuseable/Footer"
 
 import "./bootstrap.min.css"
 import "./layout.css"
+import Navbar from "./reuseable/Navbar"
 
 const Layout =({children})=>(
   <>
+  <Navbar/>
   {children}
   <Footer/>
   </>
