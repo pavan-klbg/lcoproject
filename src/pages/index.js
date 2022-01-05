@@ -1,19 +1,32 @@
 import * as React from "react"
-import { Link } from "gatsby"
+import { graphql } from 'gatsby'
 //import { StaticImage } from "gatsby-plugin-image"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import HeroSection from "../components/reuseable/HeroSection"
 
-const IndexPage = () => (
+const IndexPage = ({data}) => (
   <Layout>
     <Seo title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    
+    <HeroSection
+    img={data.img.childImageSharp.fluid}
+      title="i write code"
+      subtitle="LearnCodeOnline.in"
+      heroclass="hero-background"
+    />
     
   </Layout>
 )
-
+export const query=graphql`
+{
+  img: file(relativePath: { eq: "heromain.png" }) {
+    childImageSharp {
+      fluid {
+        ...GatsbyImageSharpFluid_tracedSVG
+      }
+    }
+  }
+}
+`
 export default IndexPage
