@@ -10,12 +10,12 @@ export default class Navbar extends Component {
               <Link to ="/" className='navbar-brand ml-5'>
                 <img src={logo} alt="logo not found" width="40px" />               
                 </Link>  
-                <Button 
+                <button 
                 className="navbar-toggler"
                 type="button"
                 >
                     <span className='text-white'>menu</span>
-                </Button>
+                </button>
             </nav>
         )
     }
