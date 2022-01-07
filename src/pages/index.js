@@ -10,7 +10,7 @@ import DualInfoblock from "../components/reuseable/DualInfoblock"
 
 const IndexPage = ({data}) => (
   <Layout>
-    <Seo title="Home" />
+    <Seo title="App" />
     <HeroSection
     img={data.img.childImageSharp.fluid}
       title="i write code"
